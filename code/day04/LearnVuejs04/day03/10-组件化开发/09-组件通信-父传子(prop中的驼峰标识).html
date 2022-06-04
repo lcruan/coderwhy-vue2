@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <cpn :c-info="info" :children-my-message="message"></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>{{cInfo}}</h2>
+            <h2>{{childrenMyMessage}}</h2>
+        </div>
+    </template>
+    <script>
+        const cpn = {
+            template: '#cpn',
+            props: {
+                cInfo: {
+                    type: Object,
+                    default () {
+                        return {}
+                    }
+                },
+                childrenMyMessage: {
+                    type: String,
+                    default: ''
+                }
+            }
+        }
+        const app = new Vue({
+            el: '#app',
+            data: {
+                info: {
+                    name: 'why',
+                    age: 18,
+                    height: 1.88
+                },
+                message: 'aaaa'
+            },
+            components: {
+                cpn
+            }
+        });
+    </script>
+</body>
+
+</html>
