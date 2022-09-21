@@ -2,7 +2,7 @@
   "name": "vuecli2test",
   "version": "1.0.0",
   "description": "test vue cli2",
-  "author": "lcruan <1416802331@qq.com>",
+  "author": "lcruan",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
